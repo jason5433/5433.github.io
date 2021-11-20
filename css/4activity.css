@@ -1,0 +1,522 @@
+/*------------------------------------*\
+    Global
+\*------------------------------------*/
+@charset "utf-8";
+*{
+	position: relative;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Gen Jyuu Gothic LP";
+    font-weight:bold;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+.container{
+	max-width: 1440px;
+	width: 100%;
+	/*border: 1px solid #000;*/
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.row{
+	/*border: 1px solid blue;*/
+	margin-left: -16px;
+	margin-right: -16px;
+}
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.col-lg-6,.col-lg-4,.col-lg-3,.col-lg-12,
+.col-md-6,.col-md-4,.col-md-3,.col-md-12,
+.col-sm-6,.col-sm-4,.col-sm-3,.col-sm-12{
+	/*border: 1px solid red;*/
+	float: left;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.col-lg-3{
+	width: 25%;
+}
+.col-lg-4{
+	width: 33.3333333%;
+}
+.col-lg-6{
+	width: 50%;
+}
+.col-lg-12{
+	width: 100%;
+}
+
+@media screen and (max-width: 768px){
+	.col-md-3{
+		width: 25%;
+	}
+	.col-md-4{
+		width: 33.3333333%;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 375px){
+	.col-sm-3{
+		width: 25%;
+	}
+	.col-sm-4{
+		width: 33.3333333%;
+	}
+	.col-sm-6{
+		width: 50%;
+	}
+	.col-sm-12{
+		width: 100%;
+	}
+}
+
+
+
+/*------------------------------------*\
+    navbar
+\*------------------------------------*/
+.navbar{
+	/*border: 1px solid #000;*/
+	height: 127px;
+	background-image: url('../pic/navbar-bgp.png');
+	position: fixed;
+    z-index: 500;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.navbar .brand{
+	display: inline-block;
+	vertical-align: top;
+	/*border: 1px solid #000;*/
+	width: 146px;
+	height: 127px;
+	background-image: url('../pic/navbar-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	/*color: #fff;*/
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+}
+.navbar .nav{
+	float: right;
+    /*display: none;*/
+}
+.navbar .nav .nav-item{
+	float: left;
+}
+.navbar .nav .nav-link{
+    text-decoration: none;
+	display: block;
+	color: #fff;
+	line-height: 24px;
+	padding: 33px 16px;
+	/*border: 1px solid #fff;*/
+	transition: color 0.3s;
+}
+.navbar .nav .nav-link:hover{
+	color: #EB5E24;
+}
+
+
+
+@media screen and (max-width: 900px){
+	.navbar .nav{
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.navbar .nav{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		z-index: 800;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		opacity: 0;
+		visibility: hidden;
+		/*transition: all 0.3s;*/
+	}
+	#popup-menu:target{
+		opacity: 1;
+		visibility: visible;
+	}
+	.navbar .nav .nav-item{
+		text-align: center;
+		
+	}
+}
+
+/* menu-toggle */
+.navbar .menu-toggle{
+	width: 48px;
+	height: 48px;
+	/*border: 1px solid #fff;*/
+	float: right;
+	margin-top: 38px;
+	display: none;
+}
+
+@media screen and (max-width: 900px){
+	.navbar .menu-toggle{
+		display: inline-block;
+	}
+}
+.navbar .menu-toggle span{
+	display: block;
+	width: 32px;
+	height: 3px;
+	background-color: #ffffff;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.navbar .menu-toggle span:nth-child(1){
+	top: 12px;
+}
+.navbar .menu-toggle span:nth-child(2){
+	top: 22px;
+}
+.navbar .menu-toggle span:nth-child(3){
+	top: 32px;
+}
+
+/* close-btn */
+.navbar .close-btn{
+	display: none;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	right: 16px;
+	top: 8px;
+}
+@media screen and (max-width: 900px){
+	.navbar .close-btn{
+		display: block;
+	}
+}
+.navbar .close-btn span{
+	width: 40px;
+	height: 2px;
+	position: absolute;
+	background-color: #EB5E24;
+	top: 50%;
+	left: 50%;
+}
+.navbar .close-btn span:nth-child(1){
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+.navbar .close-btn span:nth-child(2){
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+
+
+/*------------------------------------*\
+    content
+\*------------------------------------*/
+
+.content .pic9{
+    width: 101%;
+    /*height: 100%;*/
+    margin-top: 111px;
+    background-image: url(../pic/all.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content .intro{
+    width: 800px;
+    margin: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+
+}
+@media screen and (max-width: 768px){
+	.content .intro{
+		width: 455px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 540px){
+	.content .intro{
+		width: 350px;
+		margin: auto;
+	}
+}
+
+.content .text{
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-family: "Gen Jyuu Gothic LP";
+    color: #000000;
+    text-align: left;
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 768px){
+	.content .text{
+		font-size: 20px;
+		font-weight: 900;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-family: "Gen Jyuu Gothic LP";
+		color: #000000;
+		text-align: left;
+		padding-top: 80px;
+	}
+}
+
+@media screen and (max-width: 540px){
+	.content .text{
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-family: "Gen Jyuu Gothic LP";
+		color: #000000;
+		text-align: left;
+		padding-top: 80px;
+	}
+}
+
+.content .annotation{
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-family: "Gen Jyuu Gothic LP";
+    color: #000000;
+    text-align: left;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px){
+	.content .annotation{
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-family: "Gen Jyuu Gothic LP";
+		color: #000000;
+		text-align: left;
+		padding-top: 10px;
+	}
+}
+@media screen and (max-width: 540px){
+	.content .annotation{
+		font-size: 14px;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-family: "Gen Jyuu Gothic LP";
+		color: #000000;
+		text-align: left;
+		padding-top: 10px;
+	}
+}
+
+
+.content .image{
+    width: 588px;
+    height: 400px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    margin-top: 30px;
+    margin-left: 20px;
+	
+}
+
+@media screen and (max-width: 768px){
+	.content .image{
+		width: auto;
+		max-height: 300px;
+	}	
+}
+
+@media screen and (max-width: 540px){
+	.content .image{
+		width: auto;
+		max-height: 225px;
+	}	
+}
+
+.content .table{
+    width: 585px;
+    height: 479px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-bottom: 150px;   
+}
+@media screen and (max-width: 768px){
+	.content .table{
+		width: auto;
+		max-height: 360px;
+		margin-top: 80px;
+		margin-bottom: 120px; 
+	}
+}
+
+@media screen and (max-width: 7540px){
+	.content .table{
+		width: auto;
+		max-height: 270px;
+		margin-top: 60px;
+		margin-bottom: 100px; 
+	}
+}
+
+
+
+/*------------------------------------*\
+    footer
+\*------------------------------------*/
+
+.footer .pic10{
+    width: 100%;
+    height: 410px;
+    margin-top: -20px;
+    background-image: url(../pic/footre-bgp.png);
+	left: 0;
+	bottom:0;
+}
+
+.footer .row{
+    width: 100%;
+    height: 210px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer .row{
+        padding-top: 1px;
+    }
+}
+
+.footer .left{
+    margin-top: 74px;
+    margin-left: 64px;
+}
+
+@media screen and (max-width: 1042px){
+	.footer .left{
+        padding-bottom: 40px;
+    }
+}
+
+
+.footer .Community{
+    padding-bottom: 20px;
+}
+.footer .link span{
+    width:24px;
+    height:24px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    
+}
+
+@media screen and (max-width: 1042px){
+	.footer .link span{
+        width:18px;
+        height:18px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+    }
+}
+
+.footer .link b{
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+    font-weight: bold;
+	font-family: "Gen Jyuu Gothic LP";
+    color: #C5E0F5;
+}
+
+@media screen and (max-width: 1042px){
+	.footer .link b{
+        font-weight: 400;
+        padding-left: 10px;
+        font-size: 18px;
+        vertical-align: middle;
+        font-weight: bold;
+        font-family: "Gen Jyuu Gothic LP";
+        color: #C5E0F5;
+    }
+}
+
+.footer .image{
+    width: 529.69px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    margin-right: 34px;
+}
+
+@media screen and (max-width: 1042px){
+    .footer .image{
+        width: 285px;
+        height: 107.61px;
+    }
+}
+
+.footer .title{
+    font-size: 16px;
+    font-family: "Gen Jyuu Gothic LP";
+    color: #ffffff;
+    text-align: center;
+    margin-top: 150px;
+
+}
+@media screen and (max-width: 1042px){
+	.footer .title{
+        margin-top: 165px;
+    }
+}
