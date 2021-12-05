@@ -463,6 +463,7 @@ h1,h2,h3,h4,h5,h6,p{
     .content .image{
         width: auto;
 		max-height: 250px;
+        }
 }
 @media screen and (max-width: 540px){
 
@@ -523,6 +524,8 @@ h1,h2,h3,h4,h5,h6,p{
     footer
 \*------------------------------------*/
 
+
+
 .footer .pic10{
     width: 100%;
     height: 410px;
@@ -530,7 +533,6 @@ h1,h2,h3,h4,h5,h6,p{
     background-image: url(../pic/footre-bgp.png);
 	left: 0;
 	bottom:0;
-    z-index: 500;
 }
 
 .footer .row{
@@ -626,7 +628,7 @@ h1,h2,h3,h4,h5,h6,p{
     }
 }
 
-.footer .bttitle{
+.footer .title{
     font-size: 16px;
     font-family: "Gen Jyuu Gothic LP";
     color: #ffffff;
@@ -635,7 +637,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 }
 @media screen and (max-width: 1042px){
-	.footer .bttitle{
+	.footer .title{
         margin-top: 165px;
     }
 }
